@@ -1,5 +1,6 @@
 import 'package:armantest/pages/homepage.dart';
 import 'package:armantest/pages/loginpage.dart';
+import 'package:armantest/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,8 +17,9 @@ class myapp extends StatelessWidget {
         // home:homepage()
         // initialRoute: loginpage(),
         routes: {
-          "/home":(context) => homepage(),
           "/":(context) => loginpage(),
+          MyRoutes.loginroute:(context) => loginpage(),
+          MyRoutes.homeroute:(context) => homepage(),
         },
         );
         

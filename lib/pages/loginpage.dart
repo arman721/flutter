@@ -1,3 +1,4 @@
+import "package:armantest/utils/routes.dart";
 import "package:flutter/material.dart";
 
 class loginpage extends StatelessWidget {
@@ -41,7 +42,7 @@ class loginpage extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  print("login successful");
+                  Navigator.pushNamed(context, MyRoutes.homeroute);
                 },
                 child: Text("login"),
               ),
