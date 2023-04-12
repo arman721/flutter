@@ -1,3 +1,5 @@
+import 'package:armantest/pages/homepage.dart';
+import 'package:armantest/pages/loginpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,14 +12,15 @@ class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Material(
-      child: Center(
-        child: Container(
-          height: 200,
-          width: 200,
-          color: Colors.amber,
-        ),
-      ),
-    ));
+      
+        // home:homepage()
+        // initialRoute: loginpage(),
+        routes: {
+          "/home":(context) => homepage(),
+          "/":(context) => loginpage(),
+        },
+        );
+        
+        
   }
 }
