@@ -1,5 +1,5 @@
+import 'package:armantest/utils/routes.dart';
 import 'package:flutter/material.dart';
-
 
 class homepage extends StatefulWidget {
   const homepage({super.key});
@@ -30,12 +30,11 @@ class _homepageState extends State<homepage> {
               // handle the press
             },
           ),
-
           IconButton(
-             icon:Icon(Icons.print),
-             onPressed: () {
-               
-             },
+            icon: Icon(Icons.print),
+            onPressed: () {
+              Navigator.pushNamed(context, MyRoutes.loginroute);
+            },
           )
         ],
         leading: Icon(Icons.home),
@@ -43,17 +42,14 @@ class _homepageState extends State<homepage> {
         centerTitle: true,
       ),
       body: Container(
-        color:Color.fromARGB(255, 12, 12, 12),
-        
+        color: Color.fromARGB(255, 12, 12, 12),
         child: SafeArea(
             child: Center(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                
-                
-                child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+          child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 Container(
                   padding: EdgeInsets.only(top: 80),
                   height: 200,
@@ -68,21 +64,22 @@ class _homepageState extends State<homepage> {
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.white, fontSize: 50)),
                 ),
-                Container(
-                  margin: EdgeInsets.all(50),
-                  color: Colors.black,
-                  height: 300,
-                  width: 300,
-                  padding: EdgeInsets.all(20),
-                  child: Text('hello',style: TextStyle(color: Colors.white,fontSize: 90,fontWeight:FontWeight.w700
-                  ),)
-                ),
+                // Container(
+                //   margin: EdgeInsets.all(50),
+                //   color: Colors.black,
+                //   height: 300,
+                //   width: 300,
+                //   padding: EdgeInsets.all(20),
+                //   child: Text('hello',style: TextStyle(color: Colors.white,fontSize: 90,fontWeight:FontWeight.w700
+                //   ),)
+                // ),
                 Stack(
                   children: [
                     Container(
                       height: 250,
+                      width: 200,
                       color: Colors.amber,
-                      child: Image.asset("lib/assets/w.png"),
+                      child: Image.asset("lib/assets/login.png"),
                     ),
                     Positioned.fill(
                       child: Align(
@@ -124,41 +121,43 @@ class _homepageState extends State<homepage> {
                       Container(
                         height: 70,
                         width: 100,
-                        child: Image.asset("lib/assets/w.png"),
+                        child: Image.asset("lib/assets/login.png"),
                         color: Color.fromARGB(255, 47, 45, 45),
                       ),
                       Container(
                         padding: EdgeInsets.only(left: 10),
                         height: 70,
                         width: 170,
-                        child: Text("cbhwjn",style: TextStyle(color: Colors.amber,fontSize: 25),),
+                        child: Text(
+                          "cbhwjn",
+                          style: TextStyle(color: Colors.amber, fontSize: 25),
+                        ),
                       ),
                       Container(
                         height: 70,
                         width: 80,
-                        child: Icon(Icons.play_arrow,color: Colors.blue,size: 40,),
+                        child: Icon(
+                          Icons.play_arrow,
+                          color: Colors.blue,
+                          size: 40,
+                        ),
                       )
                     ],
                   ),
                 ),
-                        ],
-                      ),
-              ),
-            )),
+              ],
+            ),
+          ),
+        )),
       ),
-      
-      
       bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.amber,
           unselectedItemColor: Colors.blue,
           backgroundColor: Colors.red,
           items: [
             BottomNavigationBarItem(
-                
                 icon: Icon(
                   Icons.home,
-                  
-                  
                 ),
                 label: 'home',
                 backgroundColor: Colors.black),

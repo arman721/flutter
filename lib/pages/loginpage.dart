@@ -1,3 +1,4 @@
+import "package:armantest/MyTextField.dart";
 import "package:armantest/utils/routes.dart";
 import "package:flutter/material.dart";
 
@@ -23,19 +24,14 @@ class loginpage extends StatelessWidget {
                 child: Text("Welcome",
                     style: TextStyle(color: Colors.black, fontSize: 32)),
               ),
-              TextFormField(
-                decoration: InputDecoration(
-                    hintText: "Enter Username",
-                    hintStyle: TextStyle(fontSize: 25, color: Colors.black),
-                    labelText: "username"),
+              Padding(
+
+                padding: const EdgeInsets.only(left:15.0),
+                child: MyTextField(hint: "enter username", label:"username",obs: false,)
               ),
-              TextFormField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  hintText: "Enter Password",
-                  hintStyle: TextStyle(color: Colors.black, fontSize: 25),
-                  labelText: "Password",
-                ),
+              Padding(
+                padding: const EdgeInsets.only(left:15.0),
+                child: MyTextField(hint: "enter passwordname", label:"passwordname",obs: true,)
               ),
               SizedBox(
                 height: 40,
